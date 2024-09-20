@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .img-container {
+            padding: 5px;
+        }
+        .img-container img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+        .img-container.selected img {
+            border: 5px solid blue;
+        }
+    </style>
+    <title>Image Gallery</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 img-container" onclick="selectImage(this)">
+                <img src="https://via.placeholder.com/150" alt="Image 1">
+            </div>
+            <div class="col-md-4 img-container" onclick="selectImage(this)">
+                <img src="https://via.placeholder.com/150" alt="Image 2">
+            </div>
+            <div class="col-md-4 img-container" onclick="selectImage(this)">
+                <img src="https://via.placeholder.com/150" alt="Image 3">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function selectImage(element) {
+            var containers = document.getElementsByClassName('img-container');
+            for (var i = 0; i < containers.length; i++) {
+                containers[i].classList.remove('selected');
+            }
+            element.classList.add('selected');
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

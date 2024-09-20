@@ -1,0 +1,76 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="profile-card">
+          <div class="profile-header">
+            <img src="https://picsum.photos/200" alt="Avatar" class="img-fluid rounded-circle">
+            <h2>Sofia Havertz</h2>
+            <p class="text-muted">@sofiathefirst</p>
+          </div>
+          <div class="profile-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <span class="fw-bold">Email:</span> sophiahavertz@gmail.com
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Phone number:</span> +1 678-763-1761
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Gender:</span> Female
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Date of birth:</span> 14/10/2004
+              </li>
+            </ul>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal">Edit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editModalLabel">Edit Profile</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input type="text" class="form-control" id="username" value="@sofiathefirst">
+            </div>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" value="Sofia Havertz">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" value="sophiahavertz@gmail.com">
+            </div>
+            <div class="mb-3">
+              <label for="phoneNumber" class="form-label">Phone number</label>
+              <input type="tel" class="form-control" id="phoneNumber" value="+1 678-763-1761">
+            </div>
+            <div class="mb-3">
+              <label for="gender" class="form-label">Gender</label>
+              <select class="form-select" id="gender">
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="dateOfBirth" class="form-label">Date of birth</label>
+              <input type="date" class="form-control" id="dateOfBirth" value="2004-10-14">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
